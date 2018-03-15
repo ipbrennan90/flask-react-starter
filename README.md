@@ -12,3 +12,6 @@ This is a work in progress, it is certainly not production ready but I am hoping
 
 # Additional Notes
   - please don't hesitate to open an issue, I am learning more every day and I'm sure there are some rookie mistakes. I would be glad to have as much constructive criticism as you have time to give.
+
+
+Thanks and happy hacking!
