@@ -1,0 +1,28 @@
+version: '2'
+services:
+  python:
+    build:
+      context: .
+      dockerfile: docker.python
+    image: python-flask
+    container_name: server-container
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - shared:/shared
+  webpack:
+    build:
+      context: .
+      dockerfile: docker.react
+    image: react
+    container_name: static-container
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+      - /app/static/node_modules
+      - shared:/shared
+volumes:
+  shared:
+    driver: local
