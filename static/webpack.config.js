@@ -1,6 +1,6 @@
-const webpack = require('webpack')
 const Dotenv = require('dotenv-webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
 const config = {
   entry: __dirname + '/js/index.jsx',
@@ -41,7 +41,8 @@ const config = {
     new Dotenv({
       path: './.env' // Path to .env file (this is the default)
     }),
-    new ExtractTextPlugin('style.css')
+    new ExtractTextPlugin('style.css'),
+    new UglifyJSPlugin()
   ],
   watch: true,
   watchOptions: {
