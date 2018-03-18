@@ -10,9 +10,10 @@
     "docker-build": "docker-compose up --build",
     "docker-build-nc": "docker-compose build --no-cache",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack -p --progress --config webpack.config.js",
+    "build": "webpack --mode production --config webpack.config.js",
     "dev-build": "webpack --progress -d --config webpack.config.js",
-    "watch": "webpack --progress -d --config webpack.config.js --watch",
+    "watch":
+      "webpack --mode development --progress -d --config webpack.config.js --watch",
     "lint":
       "eslint . --cache --cache-location=node_modules/ --ignore-path=.gitignore"
   },

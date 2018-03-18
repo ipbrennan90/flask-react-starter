@@ -43,11 +43,7 @@ const config = {
     }),
     new ExtractTextPlugin('style.css'),
     new UglifyJSPlugin()
-  ],
-  watch: true,
-  watchOptions: {
-    poll: 1000
-  }
+  ]
 }
 
 module.exports = config
